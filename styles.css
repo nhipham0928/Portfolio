@@ -1,23 +1,31 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 @font-face {
     font-family: "MyFont";
     src: url("montse.otf");
 }
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1e293b;
-  --color-accent: #0f766e;
-  --space: 1rem;
-  --font: system, sans-serif;
+    --color-bg: #ffffff;
+    --color-text: #1e293b;
+    --color-accent: #0f766e;
+    --color-card: #ffffff;
+    --color-border: #fffbc7;
+    --color-input: #ffffff;
+    --space: 1rem;
+    --font: system, sans-serif;
 }
+
 body {
-  margin: 0;
-  font-family: "montse";
-  line-height: 1.6;
-  color: var(--color-text);
-  background: var(--color-bg);
+    margin: 0;
+    margin-bottom: 0.5cm;
+    font-family: "MyFont", sans-serif;
+    line-height: 1.25;
+    text-align: justify;
+    color: var(--color-text);
+    background: var(--color-bg);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .site-header {
@@ -28,6 +36,7 @@ body {
   gap: var(--space);
   padding: var(--space);
 }
+
 
 .site-nav ul {
   display: flex;
@@ -56,38 +65,21 @@ a { color: inherit; }
   font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
   line-height: 1.2;
 }
-@media (min-width: 48rem) {
-  .hero { grid-template-columns: 2fr 1fr; }
-}
 
 .profile-photo {
     width: fit-content;
     padding: 8px;
     border: 2px solid #333;
     border-radius: 20px;
-    box-shadow: 8px 8px 0 #565656;
+    box-shadow: 8px 8px 0 #8ec9f7;
 }
 
 .profile-photo img {
-    width: 350px;
+    width: 250px;
     height: auto;
     display: block;
     border-radius: 14px;
 }
-
-.projects {
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(16rem, 1fr));
-  gap: var(--space);
-}
-.card {
-  padding: 1.5rem;
-  border: 1px solid #fffbc7;
-  border-radius: 0.75rem;
-  background: var(--color-bg);
-}
-.card h3 { margin-top: 0; }
 
 .field {
   display: flex;
@@ -98,10 +90,14 @@ a { color: inherit; }
 input, textarea, button {
   font: inherit;
 }
-input, textarea {
-  padding: 0.75rem;
-  border: 1px solid #006aff;
-  border-radius: 0.5rem;
+
+input,
+textarea {
+    padding: 0.75rem;
+    border: 1px solid #006aff;
+    border-radius: 0.5rem;
+    background: var(--color-input);
+    color: var(--color-text);
 }
 
 .button {
@@ -117,4 +113,41 @@ input, textarea {
 :focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 3px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space);
+}
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background: var(--color-card);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.card h3 { margin-top: 0; }
+
+@media (min-width: 48rem) {
+  .hero { grid-template-columns: 2fr 1fr; }
+}
+
+body.dark-mode {
+    --color-bg: #0f172a;
+    --color-text: #e2e8f0;
+    --color-accent: #10b981;
+    --color-card: #1e293b;
+    --color-border: #334155;
+    --color-input: #1e293b;
+}
+
+#theme-toggle {
+    border: none;
+    background: transparent;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.4rem;
 }

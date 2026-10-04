@@ -6,70 +6,141 @@
     <title>Phạm Thị Yến Nhi - Consume</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+<header class="site-header container">
+    <a class="logo" href="#">Overview</a>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <button id="theme-toggle" aria-label="Chuyển chế độ sáng tối">🌙</button>
+</header>
+
+<main class="container">
+
+    <section id="about" class="hero">
+        <div>
+            <h1>Phạm Thị Yến Nhi</h1>
+            <p>
+                Calibration Engineer<br>
+                Final student at University of Science
+            </p>
+            <a class="button" href="#contact">Liên hệ</a>
+        </div>
+
+        <div class="profile-photo">
+            <img src="the.png" alt="Nhi">
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Dự án</h2>
+
+        <div class="projects">
+
+            <article class="card">
+                <h3>
+                    EEG-Based Deception Detection System |
+                    Signal Processing, Data Analysis & Machine Learning -
+                    Graduation Thesis (In Progress)
+                </h3>
+
+                <ul>
+                    <li>Investigated preprocessing and feature extraction methods for noisy EEG signals through literature review and experimental evaluation.</li>
+                    <li>Applied ICA and VMD techniques to reduce noise and improve signal quality before classification.</li>
+                    <li>Analyzed multi-channel EEG signals in both time and frequency domains.</li>
+                    <li>Extracted representative features from processed EEG signals for machine learning models.</li>
+                    <li>Evaluated different workflows and model configurations to improve robustness on real-world biological signals.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>
+                    Rice Leaf Disease Classification System |
+                    Python, Machine Learning - Oct to Dec 2025 (6 members)
+                </h3>
+
+                GitHub:
+                <a href="https://github.com/nhipham0928/Rice_leaf_disease">
+                    https://github.com/nhipham0928/Rice_leaf_disease
+                </a>
+
+                <ul>
+                    <li>Built an end-to-end image classification pipeline for rice leaf disease detection using a public dataset.</li>
+                    <li>Preprocessed images (resizing to 128x128, normalization, and data cleaning) and extracted feature representations for machine learning models.</li>
+                    <li>Trained and compared multiple models, including SVC, KNN, and Random Forest, and evaluated performance using Accuracy, Precision, Recall, and F1-score.</li>
+                    <li>Optimized the pipeline through preprocessing experiments, improving overall model performance.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>
+                    Development of an Efficient Optical Model for LEDs-Based
+                    White Light Spectrum Design Applications Research Publication |
+                    Optical Modeling & Data Analysis - Oct 2023 to Feb 2024
+                </h3>
+
+                <ul>
+                    <li>Contributed to the development of an optical simulation model for LED-based white light spectrum design.</li>
+                    <li>Participated in experimental data analysis and spectrum modeling using mathematical methods.</li>
+                    <li>Co-authored a published research paper in the Journal of Innovations in Business and Industry (2024).</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Liên hệ</h2>
+
+        <form>
+            <div class="field">
+                <label for="name">Họ tên</label>
+                <input id="name" name="name" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required>
+            </div>
+
+            <div class="field">
+                <label for="msg">Lời nhắn</label>
+                <textarea id="msg" name="msg"></textarea>
+            </div>
+
+            <button class="button" type="submit">Gửi</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>© 2026 Phạm Thị Yến Nhi</footer>
+
+<script>
+const toggleButton = document.getElementById("theme-toggle");
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️";
+}
+
+toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    const isDark = document.body.classList.contains("dark-mode");
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggleButton.textContent = isDark ? "☀️" : "🌙";
+});
+</script>
 
 </body>
 </html>
-<header class="site-header container">
-  <a class="logo" href="#">Overview</a>
-  <nav class="site-nav">
-    <ul>
-      <li><a href="#about">Giới thiệu</a></li>
-      <li><a href="#projects">Dự án</a></li>
-      <li><a href="#contact">Liên hệ</a></li>
-    </ul>
-  </nav>
-</header>
-<main class="container">
-  <section id="about" class="hero">
-    <div>
-      <h1>Phạm Thị Yến Nhi</h1>
-      <p>Sinh viên Vật lý, thích làm web.</p>
-      <a class="button" href="contact">Liên hệ</a>
-    </div>
-      <div class="profile-photo">
-      <img src="me.png" alt="Nhi">
-    </div>
-  </section>
-
-  <section id="projects">
-  <h2>Dự án</h2>
-
-  <article>
-    <h3>Dự đoán lũ quét</h3>
-    <p>C++ và cảm biến MPU6500</p>
-  </article>
-
-  <article>
-    <h3>Phân loại tín hiệu EEG</h3>
-    <p>Python và xử lý tín hiệu</p>
-  </article>
-
-  <!-- thêm article thứ 3 của bạn -->
-  <article>
-    <h3>Software Development</h3>
-    <p>Signal Processing and Physic Motion</p>
-  </article>
-
-  <section id="contact">
-  <h2>Liên hệ</h2>
-<form>
-  <div class="field">
-    <label for="name">Họ tên</label>
-    <input id="name" name="name" required>
-  </div>
-  <div class="field">
-    <label for="email">Email</label>
-    <input id="email" type="email"
-           name="email" required>
-  </div>
-  <div class="field">
-    <label for="msg">Lời nhắn</label>
-    <textarea id="msg" name="msg"></textarea>
-  </div>
-  <button class="button">Gửi</button>
-</form>
-</section>
-</section>
-</main>
-<footer>© 2026 Phạm Thị Yến Nhi</footer>
