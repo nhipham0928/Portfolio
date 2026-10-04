@@ -9,120 +9,363 @@
 
 <body>
 
-<header class="site-header container">
-    <a class="logo" href="#">Overview</a>
+<header class="site-header">
+    <div class="navbar">
 
-    <nav class="site-nav">
-        <ul>
-            <li><a href="#about">Giới thiệu</a></li>
-            <li><a href="#projects">Dự án</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-    </nav>
+        <a href="#home" class="logo">
+            NHI
+        </a>
 
-    <button id="theme-toggle" aria-label="Chuyển chế độ sáng tối">🌙</button>
+        <nav class="site-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-controls">
+            <button id="sound-toggle" aria-label="Toggle sound">
+                🔊
+            </button>
+
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                🌙
+            </button>
+
+            <audio id="background-music" loop>
+                <source src="music.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+    </div>
 </header>
 
 <main class="container">
+    <section id="home" class="home">
+        <div class="home-content">
+            <p class="home-greeting">hi, i'm Nhi 👋</p>
 
-    <section id="about" class="hero">
-        <div>
-            <h1>Phạm Thị Yến Nhi</h1>
-            <p>
-                Calibration Engineer<br>
-                Final student at University of Science
+            <h1>
+                welcome to my<br>
+                little corner<br>
+                of the internet.
+            </h1>
+
+            <p class="home-description">
+                A little space where I keep my projects,
+                interests, random thoughts, and things I enjoy.
             </p>
-            <a class="button" href="#contact">Liên hệ</a>
+
+            <a href="#about" class="button">
+                explore ↓
+            </a>
         </div>
 
-        <div class="profile-photo">
-            <img src="the.png" alt="Nhi">
-        </div>
-    </section>
+        <div class="home-image">
 
-    <section id="projects">
-        <h2>Dự án</h2>
+            <div class="home-slider">
 
-        <div class="projects">
+                <div class="home-slide">
+                    <img src="the.png" alt="Nhi">
+                </div>
 
-            <article class="card">
-                <h3>
-                    EEG-Based Deception Detection System |
-                    Signal Processing, Data Analysis & Machine Learning -
-                    Graduation Thesis (In Progress)
-                </h3>
+                <div class="home-slide">
+                    <img src="the2.jpg" alt="Nhi">
+                </div>
 
-                <ul>
-                    <li>Investigated preprocessing and feature extraction methods for noisy EEG signals through literature review and experimental evaluation.</li>
-                    <li>Applied ICA and VMD techniques to reduce noise and improve signal quality before classification.</li>
-                    <li>Analyzed multi-channel EEG signals in both time and frequency domains.</li>
-                    <li>Extracted representative features from processed EEG signals for machine learning models.</li>
-                    <li>Evaluated different workflows and model configurations to improve robustness on real-world biological signals.</li>
-                </ul>
-            </article>
+                <div class="home-slide">
+                    <img src="the3.jpg" alt="Nhi">
+                </div>
 
-            <article class="card">
-                <h3>
-                    Rice Leaf Disease Classification System |
-                    Python, Machine Learning - Oct to Dec 2025 (6 members)
-                </h3>
-
-                GitHub:
-                <a href="https://github.com/nhipham0928/Rice_leaf_disease">
-                    https://github.com/nhipham0928/Rice_leaf_disease
-                </a>
-
-                <ul>
-                    <li>Built an end-to-end image classification pipeline for rice leaf disease detection using a public dataset.</li>
-                    <li>Preprocessed images (resizing to 128x128, normalization, and data cleaning) and extracted feature representations for machine learning models.</li>
-                    <li>Trained and compared multiple models, including SVC, KNN, and Random Forest, and evaluated performance using Accuracy, Precision, Recall, and F1-score.</li>
-                    <li>Optimized the pipeline through preprocessing experiments, improving overall model performance.</li>
-                </ul>
-            </article>
-
-            <article class="card">
-                <h3>
-                    Development of an Efficient Optical Model for LEDs-Based
-                    White Light Spectrum Design Applications Research Publication |
-                    Optical Modeling & Data Analysis - Oct 2023 to Feb 2024
-                </h3>
-
-                <ul>
-                    <li>Contributed to the development of an optical simulation model for LED-based white light spectrum design.</li>
-                    <li>Participated in experimental data analysis and spectrum modeling using mathematical methods.</li>
-                    <li>Co-authored a published research paper in the Journal of Innovations in Business and Industry (2024).</li>
-                </ul>
-            </article>
+            </div>
 
         </div>
     </section>
+  
+    <section id="about" class="about">
+        <div class="section-heading">
+            <p>01 / about</p>
+            <h2>About Me</h2>
+        </div>
 
-    <section id="contact">
-        <h2>Liên hệ</h2>
-
-        <form>
-            <div class="field">
-                <label for="name">Họ tên</label>
-                <input id="name" name="name" required>
+        <div class="about-content">
+            <div class="about-gallery">
+                <div class="about-photo">
+                    <img src="about.png" alt="Nhi">
+                </div>
             </div>
 
-            <div class="field">
-                <label for="email">Email</label>
-                <input id="email" type="email" name="email" required>
-            </div>
+            <div class="about-info">
+                <div class="about-intro">
+                    <p class="about-intro-small">
+                        a little bit about me
+                    </p>
 
-            <div class="field">
-                <label for="msg">Lời nhắn</label>
-                <textarea id="msg" name="msg"></textarea>
-            </div>
+                    <h3>
+                        Hi, I'm Nhi.
+                    </h3>
 
-            <button class="button" type="submit">Gửi</button>
-        </form>
+                    <p>
+                        I'm a Physics student who enjoys exploring
+                        technology, signal processing, and all kinds
+                        of random things that catch my curiosity.
+                    </p>
+
+                    <p>
+                        This little corner of the internet is where
+                        I keep the things I make, the things I like,
+                        and occasionally the things I probably
+                        shouldn't spend this much time on.
+                    </p>
+                </div>
+
+                <div class="about-block">
+                    <h3>Study</h3>
+                    <div class="study-item">
+                        <div>
+                            <strong>University of Science, VNU</strong>
+                            <span>Physics</span>
+                        </div>
+
+                        <span class="study-year">
+                            2022 — 2026
+                        </span>
+                    </div>
+
+                    <div class="study-item">
+                        <div>
+                            <strong>Things I've been learning</strong>
+                            <span>
+                                Physics · Signal Processing · Machine Learning
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-block">
+                    <h3>Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-group">
+                            <span class="skill-label">Technical</span>
+                            <div class="skill-tags">
+                                <span>Python</span>
+                                <span>C / C++ / C#</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Matlab</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <span class="skill-label">Languages</span>
+                            <div class="skill-tags">
+                                <span>Vietnamese</span>
+                                <span>English</span>
+                                <span>Chinese</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-block">
+                    <h3>Hobbies</h3>
+                    <div class="hobby-tabs">
+                        <button type="button">🎧 Music</button>
+                        <button type="button">🎨 Art</button>
+                        <button type="button">📚 Books</button>
+                        <button type="button">🫠 Meme</button>
+                    </div>
+
+                    <div class="hobby-content">
+                        Pick one :)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="section-heading">
+            <p>02 / projects</p>
+            <h2>Things I've Made</h2>
+        </div>
+
+        <div class="projects-showcase">
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="project1.jpg" alt="EEG Deception Detection">
+                </div>
+
+                <div class="project-info">
+                    <p class="project-number">01</p>
+                    <h3>EEG Deception Detection</h3>
+
+                    <p class="project-description">
+                        EEG signal processing and machine learning
+                        for deception detection.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>EEG</span>
+                        <span>Machine Learning</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="project2.png" alt="Tea Leaf Fortune Card">
+                </div>
+
+                <div class="project-info">
+                    <p class="project-number">02</p>
+                    <h3>Tea Leaf Fortune Card</h3>
+
+                    <p class="project-description">
+                        A C++ card game with a graphical interface
+                        built using SFML.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>C++</span>
+                        <span>SFML</span>
+                        <span>OOP</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="project3.jpg" alt="Image Processing">
+                </div>
+
+                <div class="project-info">
+                    <p class="project-number">03</p>
+                    <h3>Image Processing</h3>
+
+                    <p class="project-description">
+                        Experiments with image processing,
+                        filtering and computer vision techniques.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>DIP</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="project4.gif" alt="Personal Website">
+                </div>
+
+                <div class="project-info">
+                    <p class="project-number">04</p>
+                    <h3>Personal Website</h3>
+
+                    <p class="project-description">
+                        A personal little corner of the internet
+                        for projects, hobbies and random things.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-heading">
+            <p>03 / contact</p>
+            <h2>Let's Talk</h2>
+        </div>
+
+        <div class="contact-content">
+            <a
+                href="https://www.linkedin.com/in/nhipham0928"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="linkedin.svg" alt="LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+
+            <a
+                href="mailto:nhipham0928@gmail.com"
+                class="social-link"
+            >
+                <img src="gmail.svg" alt="Email">
+                <span>Email</span>
+            </a>
+
+            <a
+                href="https://github.com/nhipham0928"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="github.svg" alt="GitHub">
+                <span>GitHub</span>
+            </a>
+
+            <a
+                href="https://www.instagram.com/iyuuah28/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="instagram.svg" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+
+            <form id="contact-form" class="contact-form">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        required
+                    ></textarea>
+                </div>
+
+                <button class="button" type="submit">
+                    Send message →
+                </button>
+            </form>
+        </div>
     </section>
 
 </main>
-
-<footer>© 2026 Phạm Thị Yến Nhi</footer>
 
 <script>
 const toggleButton = document.getElementById("theme-toggle");
@@ -141,6 +384,24 @@ toggleButton.addEventListener("click", () => {
     toggleButton.textContent = isDark ? "☀️" : "🌙";
 });
 </script>
+
+<script>
+    window.formspree =
+        window.formspree ||
+        function () {
+            (formspree.q = formspree.q || []).push(arguments);
+        };
+
+    formspree("initForm", {
+        formElement: "#contact-form",
+        formId: "moejabjz"
+    });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<footer class="site-footer">
+    <p>made with ♡ by Nhi · 2026</p>
+</footer>
 
 </body>
 </html>
