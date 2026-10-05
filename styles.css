@@ -160,7 +160,7 @@ body {
 }
 
 .menu-toggle {
-    display: none;
+    display: none !important;
 }
 
 .hero {
@@ -837,10 +837,6 @@ body.dark-mode {
         width: 34px;
         height: 34px;
     }
-    .menu-toggle {
-        display: flex !important;
-        font-size: 1.4rem !important;
-    }
     .home {
         min-height: auto;
         padding: 3rem 1.5rem 5rem;
@@ -888,5 +884,9 @@ body.dark-mode {
     .contact-content {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+    .menu-toggle {
+    display: flex !important;
+    font-size: 1.4rem !important;
     }
 }
