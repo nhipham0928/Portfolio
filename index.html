@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phạm Thị Yến Nhi - Consume</title>
+    <title>Phạm Thị Yến Nhi - Personal Website</title>
+    <!-- Nhúng Google Fonts (Cinzel & Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
+<canvas id="celestial-canvas"></canvas>
 <header class="site-header">
-
     <div class="navbar">
-
-        <a href="#home" class="logo">NHI</a>
+        <a href="#home" class="logo">Reyn</a>
 
         <nav class="site-nav">
             <a href="#home">Home</a>
@@ -23,121 +25,86 @@
         </nav>
 
         <div class="nav-controls">
-            <button id="sound-toggle" aria-label="Toggle sound">🔊</button>
-            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-
-            <button
-                id="menu-toggle"
-                class="menu-toggle"
-                aria-label="Open menu"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
+            <button id="sound-toggle" aria-label="Toggle sound">🔇</button>
+            <button id="theme-toggle" aria-label="Toggle theme">☀️</button>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
-
     </div>
-
 </header> 
 
 <main class="container">
     <section id="home" class="home">
         <div class="home-content">
-            <p class="home-greeting">hi, i'm Nhi 👋</p>
-
-            <h1>
-                welcome to my<br>
-                little corner<br>
-                of the internet.
-            </h1>
-
+            <h1>just nhi’s space.</h1>
             <p class="home-description">
-                A little space where I keep my projects,
-                interests, random thoughts, and things I enjoy.
+                Destined with Physics, crafting logic through code, and fine-tuning signals at Bosch. Welcome to my little corner.
             </p>
-
-            <a href="#about" class="button">
-                explore ↓
-            </a>
+            <a href="#about" class="button">explore ↓</a>
         </div>
 
         <div class="home-image">
-
             <div class="home-slider">
-
-                <div class="home-slide">
-                    <img src="the.png" alt="Nhi">
+                <!-- 8 ảnh được cuộn vô tận mượt mà qua CSS -->
+                <div class="home-track">
+                    <div class="home-slide"><img src="home1.jpg" alt="Slide 1"></div>
+                    <div class="home-slide"><img src="home2.jpg" alt="Slide 2"></div>
+                    <div class="home-slide"><img src="home3.jpg" alt="Slide 3"></div>
+                    <div class="home-slide"><img src="home4.jpg" alt="Slide 4"></div>
+                    <div class="home-slide"><img src="home1.jpg" alt="Slide 1"></div>
+                    <div class="home-slide"><img src="home2.jpg" alt="Slide 2"></div>
+                    <div class="home-slide"><img src="home3.jpg" alt="Slide 3"></div>
+                    <div class="home-slide"><img src="home4.jpg" alt="Slide 4"></div>
                 </div>
-
-                <div class="home-slide">
-                    <img src="the2.jpg" alt="Nhi">
-                </div>
-
-                <div class="home-slide">
-                    <img src="the3.jpg" alt="Nhi">
-                </div>
-
             </div>
-
         </div>
     </section>
   
     <section id="about" class="about">
         <div class="section-heading">
-            <p>01 / about</p>
             <h2>About Me</h2>
         </div>
 
         <div class="about-content">
             <div class="about-gallery">
                 <div class="about-photo">
-                    <img src="about.png" alt="Nhi">
+                    <img src="about.jpg" alt="Nhi">
                 </div>
             </div>
 
             <div class="about-info">
                 <div class="about-intro">
-                    <p class="about-intro-small">
-                        a little bit about me
-                    </p>
-
-                    <h3>
-                        Hi, I'm Nhi.
-                    </h3>
-
+                    <p class="about-intro-small">a little bit about me</p>
+                    <h3>Hi, I'm Nhi.</h3>
                     <p>
-                        I'm a Physics student who enjoys exploring
-                        technology, signal processing, and all kinds
-                        of random things that catch my curiosity.
+                        Physics was never just a major to me—it felt like a quiet destiny. There is a subtle poetry in how the universe operates, and I love translating that invisible rhythm into lines of code and tangible signals.
                     </p>
-
                     <p>
-                        This little corner of the internet is where
-                        I keep the things I make, the things I like,
-                        and occasionally the things I probably
-                        shouldn't spend this much time on.
+                        Currently spending my days calibrating systems at Bosch and exploring the intersection between physical hardware, algorithms, and curiosity.
                     </p>
                 </div>
 
                 <div class="about-block">
-                    <h3>Study</h3>
+                    <h3>Journey</h3>
                     <div class="study-item">
                         <div>
-                            <strong>University of Science, VNU</strong>
-                            <span>Physics</span>
+                            <strong>Bosch Global Software Technologies</strong>
+                            <span>Calibration Engineer Intern</span>
                         </div>
+                        <span class="study-year">Present</span>
+                    </div>
 
-                        <span class="study-year">
-                            2022 — 2026
-                        </span>
+                    <div class="study-item">
+                        <div>
+                            <strong>University of Science, VNU-HCM</strong>
+                            <span>Physics and Computer Science (Senior)</span>
+                        </div>
+                        <span class="study-year">2023 — 2027</span>
                     </div>
 
                     <div class="study-item">
                         <div>
                             <strong>Things I've been learning</strong>
-                            <span>
-                                Physics · Signal Processing · Machine Learning
-                            </span>
+                            <span>Physics · Signal Processing · Machine Learning</span>
                         </div>
                     </div>
                 </div>
@@ -171,13 +138,12 @@
                 <div class="about-block">
                     <h3>Hobbies</h3>
                     <div class="hobby-tabs">
-                        <button type="button">🎧 Music</button>
-                        <button type="button">🎨 Art</button>
-                        <button type="button">📚 Books</button>
-                        <button type="button">🫠 Meme</button>
+                        <button type="button" data-hobby="music">🎧 Music</button>
+                        <button type="button" data-hobby="art">🎨 Art</button>
+                        <button type="button" data-hobby="books">📚 Books</button>
+                        <button type="button" data-hobby="meme">🫠 Meme</button>
                     </div>
-
-                    <div class="hobby-content">
+                    <div class="hobby-content" id="hobby-content">
                         Pick one :)
                     </div>
                 </div>
@@ -187,8 +153,7 @@
 
     <section id="projects" class="projects-section">
         <div class="section-heading">
-            <p>02 / projects</p>
-            <h2>Things I've Made</h2>
+            <h2>Projects</h2>
         </div>
 
         <div class="projects-showcase">
@@ -196,16 +161,12 @@
                 <div class="project-image">
                     <img src="project1.jpg" alt="EEG Deception Detection">
                 </div>
-
                 <div class="project-info">
                     <p class="project-number">01</p>
                     <h3>EEG Deception Detection</h3>
-
                     <p class="project-description">
-                        EEG signal processing and machine learning
-                        for deception detection.
+                        EEG signal processing and machine learning for deception detection.
                     </p>
-
                     <div class="project-tags">
                         <span>Python</span>
                         <span>EEG</span>
@@ -218,16 +179,12 @@
                 <div class="project-image">
                     <img src="project2.gif" alt="Tea Leaf Fortune Card">
                 </div>
-
                 <div class="project-info">
                     <p class="project-number">02</p>
                     <h3>Tea Leaf Fortune Card</h3>
-
                     <p class="project-description">
-                        A C++ card game with a graphical interface
-                        built using SFML.
+                        A C++ card game with a graphical interface built using SFML.
                     </p>
-
                     <div class="project-tags">
                         <span>C++</span>
                         <span>SFML</span>
@@ -240,16 +197,12 @@
                 <div class="project-image">
                     <img src="project3.jpg" alt="Image Processing">
                 </div>
-
                 <div class="project-info">
                     <p class="project-number">03</p>
                     <h3>Image Processing</h3>
-
                     <p class="project-description">
-                        Experiments with image processing,
-                        filtering and computer vision techniques.
+                        Experiments with image processing, filtering and computer vision techniques.
                     </p>
-
                     <div class="project-tags">
                         <span>Python</span>
                         <span>OpenCV</span>
@@ -262,16 +215,12 @@
                 <div class="project-image">
                     <img src="project4.gif" alt="Personal Website">
                 </div>
-
                 <div class="project-info">
                     <p class="project-number">04</p>
                     <h3>Personal Website</h3>
-
                     <p class="project-description">
-                        A personal little corner of the internet
-                        for projects, hobbies and random things.
+                        A personal little corner of the internet for projects, hobbies and random things.
                     </p>
-
                     <div class="project-tags">
                         <span>HTML</span>
                         <span>CSS</span>
@@ -284,46 +233,24 @@
 
     <section id="contact" class="contact-section">
         <div class="section-heading">
-            <p>03 / contact</p>
-            <h2>Let's Talk</h2>
+            <h2>Contact</h2>
         </div>
 
         <div class="contact-content">
             <div class="contact-socials">
-                <a
-                    href="https://www.linkedin.com/in/nhipham0928"
-                    class="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://www.linkedin.com/in/nhipham0928" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="linkedin.svg" alt="LinkedIn">
                     <span>LinkedIn</span>
                 </a>
-
-                <a
-                    href="mailto:nhipham0928@gmail.com"
-                    class="social-link"
-                >
+                <a href="mailto:nhipham0928@gmail.com" class="social-link">
                     <img src="gmail.svg" alt="Email">
                     <span>Email</span>
                 </a>
-
-                <a
-                    href="https://github.com/nhipham0928"
-                    class="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://github.com/nhipham0928" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="github.svg" alt="GitHub">
                     <span>GitHub</span>
                 </a>
-
-                <a
-                    href="https://www.instagram.com/iyuuah28/"
-                    class="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://www.instagram.com/iyuuah28/" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="instagram.svg" alt="Instagram">
                     <span>Instagram</span>
                 </a>
@@ -332,78 +259,37 @@
             <form id="contact-form" class="contact-form">
                 <div class="field">
                     <label for="name">Name</label>
-                    <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                    >
+                    <input id="name" name="name" type="text" required>
                 </div>
-
                 <div class="field">
                     <label for="email">Email</label>
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                    >
+                    <input id="email" name="email" type="email" required>
                 </div>
-
                 <div class="field">
                     <label for="message">Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="6"
-                        required
-                    ></textarea>
+                    <textarea id="message" name="message" rows="6" required></textarea>
                 </div>
-
-                <button class="button" type="submit">
-                    Send message →
-                </button>
+                <button class="button" type="submit">Send</button>
             </form>
         </div>
     </section>
-
 </main>
-
-<script>
-const toggleButton = document.getElementById("theme-toggle");
-
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    toggleButton.textContent = "☀️";
-}
-
-toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    const isDark = document.body.classList.contains("dark-mode");
-
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    toggleButton.textContent = isDark ? "☀️" : "🌙";
-});
-</script>
-
-<script>
-    window.formspree =
-        window.formspree ||
-        function () {
-            (formspree.q = formspree.q || []).push(arguments);
-        };
-
-    formspree("initForm", {
-        formElement: "#contact-form",
-        formId: "moejabjz"
-    });
-</script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-
+<audio id="background-music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 <footer class="site-footer">
     <p>made with ♡ by Nhi · 2026</p>
 </footer>
+
+<!-- Formspree Scripts -->
+<script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree("initForm", { formElement: "#contact-form", formId: "moejabjz" });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<!-- Kết nối file script.js -->
+<script src="script.js"></script>
 
 </body>
 </html>
