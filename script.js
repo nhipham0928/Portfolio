@@ -386,6 +386,13 @@ if (celestialCanvas) {
     }
 
     window.addEventListener("resize", resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
-    renderSky();
+
+    // Chờ trang tải hoàn tất 800ms rồi mới cho hiệu ứng hoạt động
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            renderSky();
+        }, 800);
+});
 }
