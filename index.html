@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phạm Thị Yến Nhi - Personal Website</title>
-    <!-- Nhúng Google Fonts (Cinzel & Montserrat) -->
+
+    <meta name="description" content="Portfolio của Phạm Thị Yến Nhi - Sinh viên Vật lý & Kỹ thuật viên Tín hiệu. Khám phá các dự án nghiên cứu, lập trình và thông tin liên hệ.">
+    <meta name="robots" content="index, follow">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap">
+    </noscript>
+
+    <link rel="preload" as="image" href="home1.webp" fetchpriority="high">
+
+    <!-- CSS chính -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -44,16 +55,16 @@
 
         <div class="home-image">
             <div class="home-slider">
-                <!-- 8 ảnh được cuộn vô tận mượt mà qua CSS -->
                 <div class="home-track">
-                    <div class="home-slide"><img src="home1.jpg" alt="Slide 1"></div>
-                    <div class="home-slide"><img src="home2.jpg" alt="Slide 2"></div>
-                    <div class="home-slide"><img src="home3.jpg" alt="Slide 3"></div>
-                    <div class="home-slide"><img src="home4.jpg" alt="Slide 4"></div>
-                    <div class="home-slide"><img src="home1.jpg" alt="Slide 1"></div>
-                    <div class="home-slide"><img src="home2.jpg" alt="Slide 2"></div>
-                    <div class="home-slide"><img src="home3.jpg" alt="Slide 3"></div>
-                    <div class="home-slide"><img src="home4.jpg" alt="Slide 4"></div>
+                    <div class="home-slide"><img src="home1.webp" alt="Nhi Slide 1" width="360" height="450" fetchpriority="high"></div>
+                    <div class="home-slide"><img src="home2.webp" alt="Nhi Slide 2" width="360" height="450"></div>
+                    <div class="home-slide"><img src="home3.webp" alt="Nhi Slide 3" width="360" height="450"></div>
+                    <div class="home-slide"><img src="home4.webp" alt="Nhi Slide 4" width="360" height="450"></div>
+                    <!-- Lặp lại 4 ảnh để tạo vòng lặp vô tận -->
+                    <div class="home-slide"><img src="home1.webp" alt="Nhi Slide 1" width="360" height="450"></div>
+                    <div class="home-slide"><img src="home2.webp" alt="Nhi Slide 2" width="360" height="450"></div>
+                    <div class="home-slide"><img src="home3.webp" alt="Nhi Slide 3" width="360" height="450"></div>
+                    <div class="home-slide"><img src="home4.webp" alt="Nhi Slide 4" width="360" height="450"></div>
                 </div>
             </div>
         </div>
@@ -67,7 +78,7 @@
         <div class="about-content">
             <div class="about-gallery">
                 <div class="about-photo">
-                    <img src="about.jpg" alt="Nhi">
+                    <img src="about.webp" alt="Nhi Pham Portrait" width="350" height="437" loading="lazy" decoding="async">
                 </div>
             </div>
 
