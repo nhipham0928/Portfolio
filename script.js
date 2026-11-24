@@ -1,3 +1,5 @@
+
+
 // ==================== QUẢN LÝ THEME ====================
 const themeToggle = document.getElementById("theme-toggle");
 
@@ -136,7 +138,7 @@ if (hobbiesBlock) {
 // ==================== BẦU TRỜI SAO (TỐI) & HOA / TUYẾT RƠI (SÁNG) ====================
 const celestialCanvas = document.getElementById("celestial-canvas");
 
-// 👉 BẠN CHỌN HIỆU ỨNG CHO CHẾ ĐỘ SÁNG TẠI ĐÂY:
+// CHỌN HIỆU ỨNG CHO CHẾ ĐỘ SÁNG TẠI ĐÂY:
 // Đổi thành "petal" (cánh hoa bay) hoặc "snowflake" (bông tuyết rơi)
 const LIGHT_EFFECT = "petal"; // "petal" hoặc "snowflake"
 
@@ -386,13 +388,57 @@ if (celestialCanvas) {
     }
 
     window.addEventListener("resize", resizeCanvas);
-    window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
-
-    // Chờ trang tải hoàn tất 800ms rồi mới cho hiệu ứng hoạt động
-    window.addEventListener("load", () => {
-        setTimeout(() => {
-            renderSky();
-        }, 800);
-});
+    renderSky();
 }
+
+
+import { loadRepos } from './repos.js';
+const state = document.querySelector('#repos-state');
+const list = document.querySelector('#repo-list');
+
+function repoCard(r) {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = r.url;
+  a.textContent = r.name;
+  const p = document.createElement('p');
+  p.textContent = `★ ${r.stars} · ${r.desc}`;
+  li.append(a, p);
+  return li;
+}
+async function showRepos(user) {
+  state.textContent = 'Đang tải…';
+  list.textContent = '';
+  try {
+    const repos = await loadRepos(user);
+    state.textContent = repos.length ? ''
+      : 'Chưa có repo công khai.';
+    repos.forEach((r) => list.append(repoCard(r)));
+  } catch (err) {
+    state.textContent = 'Không tải được: ' + err.message;
+    const again = document.createElement('button');
+    again.textContent = 'Thử lại';
+    again.onclick = () => showRepos(user);
+    state.append(again);
+  }
+}
+
+const TTL = 10 * 60 * 1000;   // 10 phút
+
+function readCache(user) {
+  const raw =
+    localStorage.getItem('repos:' + user);
+  if (!raw) return null;
+  const { at, repos } = JSON.parse(raw);
+  if (Date.now() - at > TTL) return null;
+  return repos;
+}
+
+function writeCache(user, repos) {
+  localStorage.setItem(
+    'repos:' + user,
+    JSON.stringify({ at: Date.now(), repos }),
+  );
+}
+showRepos('nhipham0928');
